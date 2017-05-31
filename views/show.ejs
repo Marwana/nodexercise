@@ -1,0 +1,17 @@
+<% include partials/header.ejs %>
+
+<div class="container"> 
+    <div class="row" style="">
+        <h1 style="text-align: center;"><%= camp.title %></h1>
+        <hr>
+        <img src="<%= camp.image %>" alt="" style="align: center;"><br><br>
+        <div class="thumbnail">
+            <%= camp.description %>
+        </div>
+        <a class="btn btn-warning pull-right" style="width: 100px;" href="/campgrounds/<%= camp._id %>/edit">Edit</a>
+        <form style="display: inline;" action="/campgrounds/<%= camp._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger" style="width: 100px;">Delete</button>
+        </form>
+    </div>
+</div>
+<% include partials/footer.ejs %>
