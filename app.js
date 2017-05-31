@@ -109,6 +109,6 @@ app.delete("/campgrounds/:id", function(request, response) {
     })
 })
 
-app.listen(3000, function(error) {
+app.listen(port.env.PORT || 3000, function(error) {
     console.log("server starting")
 });
